@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="Js/chart.js"></script>
+    <link rel="stylesheet" href="CSS/utils.css">
+    <link rel="stylesheet" href="CSS/dashboard.css">
+</head>
+
+<body id="blur">
+
+    <div id="dashboard-container">
+
+        <div class="navbar">
+            <ul class="nav">
+                <li id="title">Dashboard</li>
+                <li id="search-bar">
+                    <img src="Assets/Icons/search-icon.svg" alt="icon">
+                    <input type="search" name="search" id="search" placeholder="search...">
+                </li>
+                <li class="details">
+                    <div id="currentDate"><span id="date"></span> <span id="month"></span>, <span id="year"></span>
+                    </div>
+                    <div id="calendar"><img src="Assets/Icons/calendar-icon.svg" alt=""></div>
+                    <div id="notification"><img src="Assets/Icons/notification.svg" alt="icon"></div>
+                    <div id="profile"></div>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="sidebar-left">
+            <div class="logo">FitFusion</div>
+
+            <ul class="menu-container">
+                <li><a href="#"><img src="Assets/Icons/DASHBOARD-FILLED.svg" alt="">Dashboard</a></li>
+                <li><a href="#"><img src="Assets/Icons/noun-workout-6976682.svg" alt="">Workouts</a></li>
+                <li><a href="#"><img src="Assets/Icons/nutrition.svg" alt="">Nutrition</a></li>
+                <li><a href="#"><img src="Assets/Icons/tools.svg" alt="">Tools</a></li>
+            </ul>
+            <!-- <div class="logout">Logout</div> -->
+        </div>
+
+        <div class="data-container">
+            <div class="header">
+                <h3>Today's Data</h3>
+                <img src="Assets/Icons/three-dots.svg" alt="icon" id="menuIcon" class="dotMenu"
+                    style="cursor: pointer;">
+            </div>
+            <ul id="options">
+                <li id="showWorkoutForm" onclick="workoutForm()">Add Workout Data</li>
+                <li id="showNutritionForm" onclick="NutritionForm()">Add Nutrition Data</li>
+            </ul>
+
+            <div class="card-wrapper">
+                <div id="steps" class="card">Steps
+                    <span id="icon" class="sp"><img src="Assets/Fitness-Icon/steps.svg" alt="" width="70px"
+                            height="70px"></span>
+                    <div id="data"><span id="val"><%= step %></span>Steps</div></div>
+
+                <div id="weight" class="card">Weight
+                    <span id="icon" class="sp2"><img src="Assets/Fitness-Icon/weight.svg" alt="" width="80px"
+                            height="100px" style="margin-top: -20px;"></span>
+                    <div id="data"><span id="val"><%= weight %></span>Kg</div></div>
+
+                <div id="calorie-burn" class="card">Calorie-burn
+                    <span id="icon"><img src="Assets/Fitness-Icon/calorie-burn.svg" alt="" width="80px"
+                            height="80px"></span>
+                    <div id="data"><span id="val"><%= calorie_burn %></span>Kcal</div></div>
+
+                <div id="heart-rate" class="card">Heart-rate
+                    <span id="icon" class="sp"><img src="Assets/Fitness-Icon/heart.svg" alt="" width="70px"
+                            height="70px"></span>
+                    <div id="data"><span id="val"><%= heart_rate %></span>Bpm</div></div>
+
+                <div id="carbs" class="card">Carbs
+                    <span id="icon"><img src="Assets/Fitness-Icon/carbs.svg" alt="" width="90px" height="90px"></span>
+                    <div id="data"><span id="val"><%= carbs %></span>Kcal</div></div>
+
+                <div id="protein" class="card">Proteins
+                    <span id="icon"><img src="Assets/Fitness-Icon/protien.svg" alt="" width="80px" height="80px"></span>
+                    <div id="data"><span id="val"><%= protein %></span>Kcal</div></div>
+
+                <div id="calorie" class="card">Calorie
+                    <span id="icon"><img src="Assets/Fitness-Icon/calorie.svg" alt="" width="80px" height="80px"></span>
+                    <div id="data"><span id="val"><%= calorie %></span>Kcal</div></div>
+
+                <div id="water" class="card">Water-intake
+                    <span id="icon"><img src="Assets/Fitness-Icon/water.svg" alt="" width="100px" height="90px"></span>
+                    <div id="data"><span id="val">
+                            <%= water_intake %>
+                        </span>Liter</div>
+                </div>
+
+            </div>
+            <div class="additional-details">
+                <div class="graps">
+                    <canvas id="stepChart" width="400" height="260"></canvas>
+                </div>
+                <div class="graps">
+                    <canvas id="weightChart" width="400" height="260"></canvas>
+                </div>
+                <div class="graps">
+                    <canvas id="calorieBurnChart" width="400" height="260"></canvas>
+                </div>
+                <div class="graps">
+                    <canvas id="heartRateChart" width="400" height="260"></canvas>
+                </div>
+                <div class="graps">
+                    <canvas id="carbsChart" width="400" height="260"></canvas>
+                </div>
+                <div class="graps">
+                    <canvas id="proteinChart" width="400" height="260"></canvas>
+                </div>
+                <div class="graps">
+                    <canvas id="calorieChart" width="400" height="260"></canvas>
+                </div>
+                <div class="graps">
+                    <canvas id="waterIntakeChart" width="400" height="260"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-right">
+
+        </div>
+
+    </div>
+
+
+    <div class="form-container" id="workoutForm">
+        <div class="form">
+            <form action="/workoutData" method="post">
+                <img src="Assets/Icons/CLOSE.svg" alt="" onclick="workoutForm()">
+                <h2>Workout Data</h2>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+
+                <label for="step">Steps</label>
+                <input type="number" name="step" id="step">
+
+                <label for="weight">Weight</label>
+                <input type="number" name="weight" id="weight" inputmode="numeric">
+
+                <label for="calorie-burn">Calorie-burn</label>
+                <input type="number" name="calorie_burn" id="calorie_burn" inputmode="numeric">
+
+                <label for="heart-rate">Heart-rate</label>
+                <input type="number" name="heart_rate" id="heart_rate" inputmode="numeric">
+                <button id="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="form-container" id="nutritionForm">
+        <div class="form">
+            <form action="/nutritionData" method="post">
+                <img src="Assets/Icons/CLOSE.svg" alt="" onclick="NutritionForm()">
+                <h2>Nutrition Data</h2>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+
+                <label for="carbs">Carbs</label>
+                <input type="number" name="carbs" id="carbs" inputmode="numeric">
+
+                <label for="protein">Protein</label>
+                <input type="number" name="protein" id="protein" inputmode="numeric">
+
+                <label for="calorie">Calorie</label>
+                <input type="number" name="calorie" id="calorie" inputmode="numeric">
+
+                <label for="water_intake">Water-intake</label>
+                <input type="number" name="water_intake" id="water_intake">
+                <button id="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="Js/dashboard.js"></script>
+</body>
+
+</html>

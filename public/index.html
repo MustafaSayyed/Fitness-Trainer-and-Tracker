@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitnessAI</title>
+    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="stylesheet" href="CSS/utils.css" />
+
+    <style>
+      .main-container {
+        background-image: url("Assets/Images/hiit-workouts.jpg");
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar Container -->
+
+    <div class="nav-container">
+      <div class="container">
+        <div class="logo">
+          <h2>FitnessAI</h2>
+        </div>
+        <ul class="nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#aboutus">About Us</a></li>
+          <li><a href="#">Tools</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="/contact-us">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main Container  -->
+
+    <div class="main-container">
+      <div class="container">
+        <div class="heading">Your Fitness, Your Way, Powered by AI</div>
+        <div class="sub-heading">
+          Personalized workouts, smarter progress tracking, and AI-driven
+          insights. Sign in to Get Started
+        </div>
+        <div class="get-started">
+          <button id="signin">
+            <a href="/login"
+              >Get Started<svg
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1vztwko"
+                focusable="false"
+                aria-hidden="true"
+                height="30"
+                width="30"
+                fill="#fff"
+                viewBox="0 0 24 24"
+                data-testid="ChevronRightIcon"
+              >
+                <path
+                  d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                ></path></svg
+            ></a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Meet your AI  -->
+    <section class="meet-ai" id="aboutus">
+      <div class="container">
+        <div class="box1">
+          <h1>Meet Your AI Fitness Assistant</h1>
+          <h3>Your Personalized Path to Fitness Success</h3>
+          <p>
+            Discover the power of advanced technology with our AI-powered
+            fitness assistant. Tailored workouts, smart progress tracking, and
+            adaptive learning ensure that you get the most out of every session.
+            <!-- Your fitness goals are within reach with personalized guidance and support available 24/7. -->
+          </p>
+        </div>
+
+        <div class="box2">
+          <svg
+            id="svg"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="500"
+            height="353.6458333333333"
+            viewBox="0, 0, 500,353.6458333333333"
+            class="frame"
+          >
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop
+                  offset="0%"
+                  style="stop-color: #007bff; stop-opacity: 1"
+                />
+                <stop
+                  offset="100%"
+                  style="stop-color: #0066ee; stop-opacity: 1"
+                />
+              </linearGradient>
+            </defs>
+            <g id="svgg">
+              <path
+                id="path0"
+                d="M36.394 11.741 C 32.335 12.698,28.047 16.975,26.926 21.185 C 26.399 23.164,26.390 323.682,26.917 325.651 C 28.030 329.811,31.512 333.508,35.604 334.876 L 37.223 335.417 251.693 335.417 L 466.162 335.417 467.768 334.876 C 471.880 333.491,475.341 329.798,476.424 325.642 C 477.033 323.304,477.033 23.571,476.424 21.233 C 475.287 16.868,471.422 12.980,467.057 11.813 C 465.516 11.401,38.141 11.329,36.394 11.741 M254.928 26.195 C 256.599 27.601,255.610 30.327,253.428 30.327 C 251.942 30.327,251.039 29.448,251.050 28.015 C 251.067 25.770,253.222 24.759,254.928 26.195 M459.310 174.284 L 459.245 304.557 252.474 304.557 L 45.703 304.557 45.638 174.284 L 45.572 44.010 252.474 44.010 L 459.376 44.010 459.310 174.284 M264.901 315.116 C 269.287 316.334,270.201 325.869,266.177 328.422 L 264.981 329.180 251.677 329.108 L 238.373 329.036 237.467 328.416 C 235.621 327.150,235.297 326.313,235.200 322.555 C 235.079 317.871,235.839 316.155,238.447 315.225 C 239.709 314.775,263.324 314.678,264.901 315.116 M238.514 317.056 C 237.175 317.784,236.979 318.433,236.979 322.130 L 236.979 325.528 237.870 326.501 L 238.762 327.474 251.423 327.546 C 267.335 327.637,266.716 327.833,266.887 322.668 C 266.993 319.477,266.700 318.262,265.600 317.337 L 264.804 316.667 251.998 316.677 C 241.457 316.686,239.073 316.753,238.514 317.056 "
+                fill="url(#grad1)"
+                stroke="none"
+                fill-rule="evenodd"
+              ></path>
+            </g>
+          </svg>
+          <img src="Assets/Images/main.jpg" alt="" id="image" />
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section">
+      <div class="feature-container">
+        <h1>Our Features</h1>
+        <div class="features">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="#007BFF"
+            class="left-arrow"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"
+            />
+          </svg>
+          <div class="feature active">
+            <h3 id="title">Personalized Workouts</h3>
+            <div id="description">
+              Get workout plans tailored to your fitness level, goals, and
+              preferences. Our AI continuously adjusts your plan based on your
+              progress and feedback.
+            </div>
+          </div>
+          <div class="feature active">
+            <h3 id="title">Smart Progress Tracking</h3>
+            <div id="description">
+              Track your workouts, monitor your progress, and celebrate your
+              achievements with real-time data and insights.
+            </div>
+          </div>
+          <div class="feature active">
+            <h3 id="title">Nutrition Guidance</h3>
+            <div id="description">
+              Receive customized meal plans and nutrition advice to complement
+              your fitness routine and help your each goals faster.
+            </div>
+          </div>
+          <div class="feature">
+            <h3 id="title">AI-Powered Exercise Tracking</h3>
+            <div id="description">
+              Utilize machine learning algorithms to track and analyze user
+              workouts, providing real- feedback and suggestions for
+              improvement.
+            </div>
+          </div>
+          <div class="feature">
+            <h3 id="title">AI-Driven Insights and Recommendations</h3>
+            <div id="description">
+              AI provides actionable insights, recommendations, adjustments to
+              their workout and nutrition plans, ensuring they reach their full
+              potential.
+            </div>
+          </div>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="#007BFF"
+            class="right-arrow"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <div class="main" id="testimonials">
+      <div class="container1 effect">
+        <img src="Assets/Images/quotes3.png" class="img" />
+
+        <p class="card-text">
+          I believe in the power of data-driven fitness. Virtual trackers
+          provide me with detailed metrics on my training sessions, helping me
+          optimize my performance and recovery. They're essential for staying on
+          top of my fitness game.
+        </p>
+
+        <h3 class="card-title" style="padding-top: 15px">Virat Kohli</h3>
+      </div>
+      <div class="container2 effect">
+        <img src="Assets/Images/quotes3.png " class="img" />
+
+        <p class="card-text">
+          Virtual fitness trackers are like having <br />a personal health
+          assistant. They help you track your workouts, monitor your heart rate,
+          and even remind you to stay hydrated. These devices make fitness more
+          accessible and personalized
+        </p>
+        <br />
+        <br />
+        <h3 class="card-title">Shilpa Shetty</h3>
+      </div>
+      <div class="container3 effect">
+        <img src="Assets/Images/quotes3.png" class="img" />
+
+        <p class="card-text">
+          As an athlete, I find virtual fitness trackers incredibly useful. They
+          help me monitor my training intensity,<br />
+          track recovery, and ensure I stay on track with my fitness goals.
+        </p>
+        <br />
+        <br />
+        <h3 class="card-title">Sakshi Malik</h3>
+      </div>
+    </div>
+    <!-- Footer Container -->
+    <div class="footer-container">
+      <div class="footer">
+        <div class="container-1">
+          <h1>FitnessAI</h1>
+          <div class="email flex-container">
+            <!-- Email  -->
+            <img src="Assets/Icons/email.svg" alt="Email-icon" />
+            fitnessai@gmail.com
+          </div>
+
+          <!-- Phone  -->
+          <div class="contact flex-container">
+            <img src="Assets/Icons/phone.svg" alt="Phone-icon" />012-3456789
+          </div>
+
+          <div class="social">
+            <a href="#"
+              ><img src="Assets/Icons/facebook.svg" alt="Facebook-icon" />
+            </a>
+
+            <a href="#"><img src="Assets/Icons/x.svg" alt="X-icon" /> </a>
+
+            <a href="#"
+              ><img src="Assets/Icons/insta.svg" alt="Instagram-icon" />
+            </a>
+
+            <a href="#"
+              ><img src="Assets/Icons/linkedin.svg" alt="Linkedin-icon" />
+            </a>
+          </div>
+        </div>
+
+        <div class="container-2">
+          <ul class="company">
+            <h3>Company</h3>
+            <li><a href="#">Home</a></li>
+            <li><a href="#aboutus">About Us</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+          </ul>
+
+          <ul class="company">
+            <h3>Service</h3>
+            <li><a href="#">Personalized Workouts</a></li>
+            <li><a href="#">Personalized Nutrition</a></li>
+            <li><a href="#">Progress Tracking</a></li>
+            <li><a href="#">Weekly Analysis</a></li>
+          </ul>
+
+          <ul class="tools">
+            <h3>Tools</h3>
+            <li><a href="#">BMI Calculator</a></li>
+            <li><a href="#">Macro Calculator</a></li>
+            <li><a href="#">Body Fat Calculator</a></li>
+            <li><a href="#">1RM Calculator</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">All Right are reserved &copy; 2024</div>
+    </div>
+
+    <!-- Footer Container End  -->
+
+    <script src="Js/index.js"></script>
+  </body>
+</html>

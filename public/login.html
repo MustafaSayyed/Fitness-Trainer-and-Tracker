@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="CSS/login.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Login to FitnessAI</h2>
+        <form action="/login-auth" method="post">
+            <div class="inputbox">
+                <input type="email" name="email" id="email" placeholder="Email address" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <a href="#" id="forgot-pw">Forgot Password?</a>
+                <input type="submit" name="login" value="Login" id="login">
+            </div>
+            <p>Don't have an account? <a href="/signup">Sign up</a></p>
+            <div class="divider">
+                <hr />
+                <span>Or Sign in with</span>
+                <hr />
+            </div>
+            <div class="social-login">
+                <button><img src="Assets/Icons/google-logo.svg" alt="Google logo">Sign in with Google</button>
+                <button><img src="Assets/Icons/facebook-logo.svg" alt="Google logo">Sign in with Facebook</button>
+                <button><img src="Assets/Icons/microsoft-logo.svg" alt="Google logo">Sign in with Microsoft</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

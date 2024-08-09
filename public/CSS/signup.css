@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    color: #007BFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.form-step {
+    width: 400px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    display: none;
+    box-shadow: 0 0 500px rgba(0, 0, 0, 0.1);
+}
+
+.active {
+    display: block;
+}
+
+.options label {
+    width: 100%;
+    display: block;
+    padding: 15px 0 15px 25px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    text-align: left;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+label {
+    outline-color: #0066ee;
+}
+
+label {
+    transition: all 0.5s ease;
+}
+
+.next, .submit{
+    width: 100%;
+    padding: 15px 0 15px 25px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #fff;
+    transition: transform 0.9s ease;
+}
+
+.next:active,
+.submit:active {
+    transform: scale(0.95);
+}
+
+.next:hover,
+.submit:hover {
+    background-color: #0066ee;
+}
+
+.que {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.form-step-container {
+    display: flex;
+}
+
+.num::-webkit-inner-spin-button,
+.num::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.num {
+    height: 80px;
+    width: 160px;
+    text-align: center;
+    font-size: 30px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 5px;
+    outline-color: #007BFF;
+    cursor: auto;
+}
+
+.extra-content .options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.extra-content .options label {
+    width: 48.5%;
+    padding: 15px;
+}
+
+.personal-detail input {
+    width: 100%;
+    display: block;
+    padding: 15px 0 15px 25px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    outline-color: #007BFF;
+}

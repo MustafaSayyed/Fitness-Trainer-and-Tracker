@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="CSS/signup.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>Signup to FitnessAI</h2>
+    <div class="progress-bar">
+      <span class="line"></span>
+    </div>
+    <form action="/createUser" method="post">
+      <div class="form-step-container">
+
+        <div class="form-step active">
+          <div class="que">What is your Gender?</div>
+          <div class="options">
+            <label for="male" class="select">Male</label>
+            <input type="radio" name="gender" value="Male" id="male" hidden>
+            <label for="female" class="select">Female</label>
+            <input type="radio" name="gender" value="Female" id="female" hidden>
+            <label for="other" class="select">Prefer not to say</label>
+            <input type="radio" name="gender" value="Prefer not to say" id="other" hidden>
+          </div>
+          <input type="button" value="Next" class="next">
+        </div>
+
+        <div class="form-step">
+          <div class="que">What is your age?</div>
+          <div class="options">
+            <input type="number" name="age" id="age" inputmode="numeric" class="num" placeholder="Age">
+          </div>
+          <input type="button" value="Next" class="next">
+        </div>
+
+        <div class="form-step">
+          <div class="que">What is your Height?</div>
+          <div class="options">
+            <input type="number" name="Height" id="Height" inputmode="numeric" class="num" placeholder="in CM">
+          </div>
+          <input type="button" value="Next" class="next">
+        </div>
+        <div class="form-step">
+          <div class="que">What is your weight?</div>
+          <div class="options">
+            <input type="number" name="weight" id="weight" inputmode="numeric" class="num" placeholder="weight">
+          </div>
+          <input type="button" value="Next" class="next">
+        </div>
+
+        <div class="form-step">
+          <div class="que">What is your fitness goal?</div>
+          <div class="options">
+            <label for="lose">Lose Weight</label>
+            <input type="radio" name="goal" value="Lose Weight" id="lose" hidden>
+
+            <label for="build">Build Muscle</label>
+            <input type="radio" name="goal" value="Build Muscle" id="build" hidden>
+
+            <label for="maintain">Maintain Fitness</label>
+            <input type="radio" name="goal" value="Maintain Fitness" id="maintain" hidden>
+          </div>
+          <input type="button" value="Next" class="next">
+        </div>
+
+        <div class="form-step extra-content">
+          <div class="que">How often would you like to workout?</div>
+          <div class="options">
+            <label for="2x-week">2x per week</label>
+            <input type="radio" name="frequency" value="2x per week" id="2x-week" hidden>
+            <label for="3x-week">3x per week</label>
+            <input type="radio" name="frequency" value="3x per week" id="3x-week" hidden>
+            <label for="4x-week">4x per week</label>
+            <input type="radio" name="frequency" value="4x per week" id="4x-week" hidden>
+            <label for="5x-week">5x per week</label>
+            <input type="radio" name="frequency" value="5x per week" id="5x-week" hidden>
+            <label for="6x-week">6x per week</label>
+            <input type="radio" name="frequency" value="6x per week" id="6x-week" hidden>
+            <label for="7x-week">7x per week</label>
+            <input type="radio" name="frequency" value="7x per week" id="7x-week" hidden>
+
+          </div>
+          <input type="button" value="Next" class="next">
+        </div>
+
+        <div class="form-step">
+          <div class="que">Are you new to lifting?</div>
+          <div class="options">
+            <label for="yes">Yes, I'm a beginner</label>
+            <input type="radio" name="experience" value="Yes" id="yes" hidden>
+
+            <label for="not_really">Not Really, I'm intermediate</label>
+            <input type="radio" name="experience" value="Not Really" id="not_really" hidden>
+
+            <label for="no">No. I'm advanced, bro</label>
+            <input type="radio" name="experience" value="No" id="no" hidden>
+          </div>
+          <input type="button" value="Next" class="next">
+        </div>
+
+        <div class="form-step">
+          <div class="que">Personal details</div>
+          <div class="personal-detail">
+            <input type="text" name="name" id="name" placeholder="Name">
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="password" name="password" id="password" placeholder="Password">
+          </div>
+          <input type="submit" value="Submit" class="submit">
+
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+  <script src="Js/signup.js"></script>
+</body>
+
+</html>
